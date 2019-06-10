@@ -1,12 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Notfound from './notfound';
+import Regular from './regular';
+import Trending from './trending';
+import Random from './random';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const giphysearch = (
+    <Router>
+        <div>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/regular">Search</Link></li>
+                <li><Link to="/trending">Trending</Link></li>
+                <li><Link to="/random">Random</Link></li>
+            </ul>
+            <Switch>
+            <Route exact path="/" component={App} />
+            <Route path="/regular" component={Regular} />
+            <Route path="/trending" component={Trending} />
+            <Route path="/random" component={Random} />
+            <Route component={Notfound} />
+            </Switch>
+        </div>
+    </Router>
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(giphysearch, document.getElementById('root'));
