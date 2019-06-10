@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/giphy-api/static/css/main.11d16969.chunk.css",
+    "main.js": "/giphy-api/static/js/main.050a5d17.chunk.js",
+    "main.js.map": "/giphy-api/static/js/main.050a5d17.chunk.js.map",
+    "runtime~main.js": "/giphy-api/static/js/runtime~main.c9e52869.js",
+    "runtime~main.js.map": "/giphy-api/static/js/runtime~main.c9e52869.js.map",
+    "static/js/2.906af715.chunk.js": "/giphy-api/static/js/2.906af715.chunk.js",
+    "static/js/2.906af715.chunk.js.map": "/giphy-api/static/js/2.906af715.chunk.js.map",
+    "index.html": "/giphy-api/index.html",
+    "precache-manifest.0cac09dc3c0394bd5222ecc932a00acc.js": "/giphy-api/precache-manifest.0cac09dc3c0394bd5222ecc932a00acc.js",
+    "service-worker.js": "/giphy-api/service-worker.js",
+    "static/css/main.11d16969.chunk.css.map": "/giphy-api/static/css/main.11d16969.chunk.css.map"
+  }
+}
