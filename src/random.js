@@ -22,7 +22,6 @@ class Random extends React.Component {
         console.log(response);
         console.log(response.data.data.images);
         this.setState({
-          // imageurl: response.data.data
           imageurl: response.data.data.images.downsized_large.url
         });
       })
