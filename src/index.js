@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
-import "./index.css";
-// import App from "./App";
+import "./css/index.css";
 import Notfound from "./notfound";
 import Regular from "./regular";
 import Trending from "./trending";
@@ -11,7 +10,7 @@ import Random from "./random";
 const giphysearch = (
   <Router>
     <div>
-      <ul>
+      <ul className="navigation">
         <li>
           <Link to="/">Search</Link>
         </li>
@@ -23,7 +22,6 @@ const giphysearch = (
         </li>
       </ul>
       <Switch>
-        {/* <Route exact path="/" component={App} /> */}
         <Route exact path="/" component={Regular} />
         <Route path="/trending" component={Trending} />
         <Route path="/random" component={Random} />
