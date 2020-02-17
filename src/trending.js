@@ -5,7 +5,7 @@ import Results from "./results";
 class Trending extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: this.props, imageurl: [] }; //Tag for search
+    this.state = { imageurl: [], title: "" }; //Tag for search
   }
 
   // Executes when page loads
@@ -14,14 +14,14 @@ class Trending extends React.Component {
   }
 
   search = () => {
-    console.log(this.state);
     axios
       .get(
         "http://api.giphy.com/v1/gifs/trending?api_key=VktLrQTkPGO3xkA7IJxOgvvrJbkefodH"
       )
       .then(response => {
         this.setState({
-          imageurl: response.data.data
+          imageurl: response.data.data,
+          title: response.data.data
         });
       })
       .catch(function(error) {
@@ -34,8 +34,7 @@ class Trending extends React.Component {
     return (
       <div>
         <h2>Trending gifs</h2>
-        <br></br>
-        {images}
+        <div className="flex-container">{images}</div>
       </div>
     );
   }
