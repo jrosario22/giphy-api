@@ -18,6 +18,7 @@ class Regular extends React.Component {
 
   //For when search field is empty
   handleSubmit(event) {
+    this.search();
     event.preventDefault();
   }
 
@@ -45,12 +46,21 @@ class Regular extends React.Component {
     return (
       <div>
         <h2>Search for a gif:</h2>
-        <input
+        {/* <input
           type="search"
           placeholder="Search"
           onChange={this.handleChange}
         ></input>
-        <input type="submit" onClick={this.search}></input>
+        <input type="submit" onClick={this.search}></input> */}
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="search"
+            placeholder="Search"
+            // value={this.state.value}
+            onChange={this.handleChange}
+          />
+          <input type="submit" value="Submit" />
+        </form>
         <div className="flex-container">{images}</div>
       </div>
     );
