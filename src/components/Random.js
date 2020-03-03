@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import SearchBar from "./SearchBar";
 
 class Random extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class Random extends React.Component {
     const images = this.state.imageurl;
     return (
       <div>
+        <SearchBar />
         <h2>Random gif</h2>
         <br></br>
         <img src={images} alt="" />

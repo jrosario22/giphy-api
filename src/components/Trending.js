@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
-import Results from "./results";
-import Regular from "./regular";
-import { Route } from "react-router-dom";
+import Results from "./Results";
+import SearchBar from "./SearchBar";
 
 class Trending extends React.Component {
   constructor(props) {
@@ -35,7 +34,7 @@ class Trending extends React.Component {
     const images = this.state.imageurl.map(i => <Results i={i} />);
     return (
       <div>
-        <Route component={Regular} />
+        <SearchBar />
         <h2>Trending gifs</h2>
         <div className="flex-container">{images}</div>
       </div>

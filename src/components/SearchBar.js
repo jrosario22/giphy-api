@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import Results from "./results";
+import Results from "./Results";
 
-class Regular extends React.Component {
+class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: this.props, imageurl: [], title: "" }; //Tag for search
@@ -46,17 +46,10 @@ class Regular extends React.Component {
     return (
       <div>
         <h2>Search for a gif:</h2>
-        {/* <input
-          type="search"
-          placeholder="Search"
-          onChange={this.handleChange}
-        ></input>
-        <input type="submit" onClick={this.search}></input> */}
         <form onSubmit={this.handleSubmit}>
           <input
             type="search"
             placeholder="Search"
-            // value={this.state.value}
             onChange={this.handleChange}
           />
           <input type="submit" value="Submit" />
@@ -67,4 +60,4 @@ class Regular extends React.Component {
   }
 }
 
-export default Regular;
+export default SearchBar;
